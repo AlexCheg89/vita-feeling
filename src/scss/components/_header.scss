@@ -1,1 +1,66 @@
-// ваш код
+.header {
+
+  padding: 20px 0;
+  border: 1px solid #dadada;
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left, &__right {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  &__menu {
+    display: flex;
+  }
+
+  &__logo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+  }
+
+  &__logo-img {
+    margin: 0 auto;
+    max-width: 260px;
+  }
+
+  &__logo-text {
+    font-size: 14px;
+    color: #595959;
+    text-align: center;
+  }
+}
+
+.header-left {
+  width: 100%;
+  &__contacts {
+    display: flex;
+    border-bottom: 1px solid #595959;
+  }
+}
+
+.header-right {
+  width: 100%;
+
+  &__top, &__bottom {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  &__top {
+    border-bottom: 1px solid #595959;
+  }
+
+  &__search-form {
+    position: relative;
+  }
+
+}
