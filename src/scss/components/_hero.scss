@@ -1,0 +1,25 @@
+.hero {
+  height: 100vh;
+  background: url('/../img/hero-bg.jpg') center / cover no-repeat;
+
+  &__contant {
+    width: 50%;
+  }
+  &__title {
+    color: #42b224;
+  }
+  &__title span {
+    color: #3a3a3a;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  &__list-item {
+    height: 200px;
+    border: 1px solid red;
+  }
+}

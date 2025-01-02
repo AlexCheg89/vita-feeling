@@ -40,9 +40,30 @@
 
 .header-left {
   width: 100%;
+
   &__contacts {
     display: flex;
+    padding-bottom: 15px;
     border-bottom: 1px solid #595959;
+  }
+
+  &__contacts span {
+    padding: 0 5px;
+  }
+
+  &__phonelink {
+    display: flex;
+    align-items: center;
+    color: inherit;
+  }
+
+  &__phonelink:before {
+    margin-right: 20px;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    content: "";
+    background: url("/../img/tel-icon.png") center / cover no-repeat;
   }
 }
 
@@ -56,11 +77,26 @@
   }
 
   &__top {
+    padding-bottom: 10px;
     border-bottom: 1px solid #595959;
   }
 
   &__search-form {
     position: relative;
+  }
+
+  &__search-btn {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 30px;
+    background: url("/../img/search-icon.png") center / contain no-repeat;
+    display: block;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    right: 5px;
+
   }
 
 }
