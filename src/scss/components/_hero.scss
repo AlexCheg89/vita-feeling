@@ -1,15 +1,29 @@
 .hero {
-  height: 100vh;
+  height: 100%;
   background: url('/../img/hero-bg.jpg') center / cover no-repeat;
+  padding-bottom: 220px;
+  border: 1px solid yellow;
 
-  &__contant {
-    width: 50%;
+  &__content {
+    padding-top: 50px;
+    width: 45%;
   }
   &__title {
+    margin-bottom: 30px;
+    font-size: 44px;
+    font-weight: bold;
     color: #42b224;
+    line-height: 44px;
   }
   &__title span {
+    display: inline-block;
+    font-size: 35px;
+    //line-height: 44px;
     color: #3a3a3a;
+  }
+
+  &__descr {
+    margin-bottom: 50px;
   }
 
   &__list {
@@ -19,7 +33,42 @@
   }
 
   &__list-item {
-    height: 200px;
-    border: 1px solid red;
+    min-width: 244px;
+    height: 100%;
+    color: var(--light-color);
+  }
+
+  &__list-item:nth-child(1) {
+    background-color: #fcb44d;
+  }
+
+  &__list-item:nth-child(2) {
+    background-color: #78d460;
+  }
+
+  &__list-item:nth-child(3) {
+    background-color: #a6cd42;
+  }
+
+  &__list-item:nth-child(4) {
+    background-color: #f7875b;
+  }
+
+  &__list-link {
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__list-link:hover {
+    cursor: pointer;
+  }
+
+  &__list-img {
+    width: 60px;
   }
 }
