@@ -1,0 +1,19 @@
+.about_product {
+
+  &__content {
+    display: flex;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+}
+
+
+
+.about_product-content {
+  &__item {
+    display: flex;
+  }
+}
