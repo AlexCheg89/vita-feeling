@@ -2,7 +2,11 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
+  --font-family: "Roboto", sans-serif;
+  --font-family-title: "Philosopher", sans-serif;
+  --font-family-main-title: "Exo2", sans-serif;
+  --font-family-btn: "Montserrat", sans-serif;
+  --font-family-footitle: "Oswald", sans-serif;
   --content-width: 1610px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
