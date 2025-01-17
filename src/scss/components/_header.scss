@@ -4,9 +4,48 @@
   border: 1px solid #dadada;
 
   &__container{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  &__contacts {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 10px;
+  }
+
+  &__phonelink {
+    display: flex;
+    align-items: center;
+    color: inherit;
+  }
+
+  &__phonelink:before {
+    margin-right: 5px;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    content: "";
+    background: url("/../img/tel-icon.png") center / cover no-repeat;
+  }
+
+  &__logo {
+    grid-row: span 2;
+    text-align: center;
+  }
+
+  &__login {
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+
+  }
+
+
+
+  &__container div {
+    border: 1px solid grey;
   }
 
   &__left, &__right {
@@ -17,14 +56,15 @@
 
   &__menu {
     display: flex;
+    gap: 10px;
   }
 
-  &__logo {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    color: inherit;
-  }
+  // &__logo {
+  //   width: 100%;
+  //   display: flex;
+  //   flex-direction: column;
+  //   color: inherit;
+  // }
 
   &__logo-img {
     margin: 0 auto;
@@ -49,22 +89,13 @@
 
   &__contacts span {
     padding: 0 5px;
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
-  &__phonelink {
-    display: flex;
-    align-items: center;
-    color: inherit;
-  }
 
-  &__phonelink:before {
-    margin-right: 20px;
-    display: inline-block;
-    width: 19px;
-    height: 19px;
-    content: "";
-    background: url("/../img/tel-icon.png") center / cover no-repeat;
-  }
 }
 
 .header-right {
@@ -96,7 +127,6 @@
     margin: 0;
     top: 0;
     right: 5px;
-
   }
 
 }
