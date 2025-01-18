@@ -2,131 +2,155 @@
 
   padding: 20px 0;
   border: 1px solid #dadada;
+  color: rgb(89, 89, 89);
 
-  &__container{
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: repeat(2, auto);
+  &__container {
+    position: relative;
+
+    @include small-tablet {
+      display: grid;
+      grid-template-columns: repeat(4 auto);
+      grid-template-areas:
+        "catalog phone contacts card";
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include small-tablet {
+
+    }
   }
 
   &__contacts {
     display: flex;
+    width: 33%;
     align-items: center;
-    gap: 10px;
-  }
+    column-gap: 15px;
+    border-bottom: 2px solid grey;
 
-  &__phonelink {
-    display: flex;
-    align-items: center;
-    color: inherit;
-  }
+    @include tablet {
+      width: 30%;
+    }
 
-  &__phonelink:before {
-    margin-right: 5px;
-    display: inline-block;
-    width: 19px;
-    height: 19px;
-    content: "";
-    background: url("/../img/tel-icon.png") center / cover no-repeat;
-  }
+    @include small-tablet {
+      justify-content: space-between;
+      width: 100%;
+      border: 0;
+    }
 
-  &__logo {
-    grid-row: span 2;
-    text-align: center;
-  }
-
-  &__login {
-    display: inline-flex;
-    justify-content: end;
-    align-items: center;
-
-  }
-
-
-
-  &__container div {
-    border: 1px solid grey;
-  }
-
-  &__left, &__right {
-    display: flex;
-    flex-direction: column;
-  }
-
-
-  &__menu {
-    display: flex;
-    gap: 10px;
-  }
-
-  // &__logo {
-  //   width: 100%;
-  //   display: flex;
-  //   flex-direction: column;
-  //   color: inherit;
-  // }
-
-  &__logo-img {
-    margin: 0 auto;
-    max-width: 260px;
-  }
-
-  &__logo-text {
-    font-size: 14px;
-    color: #595959;
-    text-align: center;
-  }
-}
-
-.header-left {
-  width: 100%;
-
-  &__contacts {
-    display: flex;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #595959;
+    span {
+      @include small-tablet {
+        display: none;
+      }
+    }
   }
 
   &__contacts span {
-    padding: 0 5px;
+    font-size: 15px;
+    line-height: 32px;
+  }
 
+  &__phonelink {
+    font-size: 15px;
+    line-height: 32px;
+
+    @include small-tablet {
+      display: block;
+      grid: phone;
+    }
+  }
+
+  &__contacts-btn {
+    font-size: 15px;
+    line-height: 32px;
+
+    @include small-tablet {
+      display: block;
+      grid-area: contacts;
+    }
+  }
+
+  &__login {
+    @include small-tablet {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+
+    @include small-tablet {
+
+    }
+  }
+
+  &__catalog {
+    @include small-tablet {
+      grid-area: catalog;
+    }
+  }
+
+  &__mark {
     @include small-tablet {
       display: none;
     }
   }
 
+  &__blog {
+    @include small-tablet {
+      display: none;
+    }
+  }
 
-}
-
-.header-right {
-  width: 100%;
-
-  &__top, &__bottom {
+  &__shopbtn {
     display: flex;
     justify-content: end;
     align-items: center;
+    column-gap: 10px;
   }
 
-  &__top {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #595959;
+  &__shopbtn span {
+    @include small-tablet {
+      display: none;
+    }
   }
 
-  &__search-form {
-    position: relative;
+  &__partner-prog {
+    display: none;
   }
 
-  &__search-btn {
+  &__logo {
     position: absolute;
-    content: "";
-    width: 24px;
-    height: 30px;
-    background: url("/../img/search-icon.png") center / contain no-repeat;
-    display: block;
-    padding: 0;
-    margin: 0;
     top: 0;
-    right: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 0;
+    font-size: 0;
+
+    @include small-tablet {
+
+    }
   }
 
+  &__logo-img {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__search {
+
+  }
 }
