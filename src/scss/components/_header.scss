@@ -1,156 +1,156 @@
-.header {
+// .header {
 
-  padding: 20px 0;
-  border: 1px solid #dadada;
-  color: rgb(89, 89, 89);
+//   padding: 20px 0;
+//   border: 1px solid #dadada;
+//   color: rgb(89, 89, 89);
 
-  &__container {
-    position: relative;
+//   &__container {
+//     position: relative;
 
-    @include small-tablet {
-      display: grid;
-      grid-template-columns: repeat(4 auto);
-      grid-template-areas:
-        "catalog phone contacts card";
-    }
-  }
+//     @include small-tablet {
+//       display: grid;
+//       grid-template-columns: repeat(4 auto);
+//       grid-template-areas:
+//         "catalog phone contacts card";
+//     }
+//   }
 
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+//   &__top {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
 
-    @include small-tablet {
+//     @include small-tablet {
 
-    }
-  }
+//     }
+//   }
 
-  &__contacts {
-    display: flex;
-    width: 33%;
-    align-items: center;
-    column-gap: 15px;
-    border-bottom: 2px solid grey;
+//   &__contacts {
+//     display: flex;
+//     width: 33%;
+//     align-items: center;
+//     column-gap: 15px;
+//     border-bottom: 2px solid grey;
 
-    @include tablet {
-      width: 30%;
-    }
+//     @include tablet {
+//       width: 30%;
+//     }
 
-    @include small-tablet {
-      justify-content: space-between;
-      width: 100%;
-      border: 0;
-    }
+//     @include small-tablet {
+//       justify-content: space-between;
+//       width: 100%;
+//       border: 0;
+//     }
 
-    span {
-      @include small-tablet {
-        display: none;
-      }
-    }
-  }
+//     span {
+//       @include small-tablet {
+//         display: none;
+//       }
+//     }
+//   }
 
-  &__contacts span {
-    font-size: 15px;
-    line-height: 32px;
-  }
+//   &__contacts span {
+//     font-size: 15px;
+//     line-height: 32px;
+//   }
 
-  &__phonelink {
-    font-size: 15px;
-    line-height: 32px;
+//   &__phonelink {
+//     font-size: 15px;
+//     line-height: 32px;
 
-    @include small-tablet {
-      display: block;
-      grid: phone;
-    }
-  }
+//     @include small-tablet {
+//       display: block;
+//       grid: phone;
+//     }
+//   }
 
-  &__contacts-btn {
-    font-size: 15px;
-    line-height: 32px;
+//   &__contacts-btn {
+//     font-size: 15px;
+//     line-height: 32px;
 
-    @include small-tablet {
-      display: block;
-      grid-area: contacts;
-    }
-  }
+//     @include small-tablet {
+//       display: block;
+//       grid-area: contacts;
+//     }
+//   }
 
-  &__login {
-    @include small-tablet {
-      display: none;
-      opacity: 0;
-    }
-  }
+//   &__login {
+//     @include small-tablet {
+//       display: none;
+//       opacity: 0;
+//     }
+//   }
 
-  &__bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+//   &__bottom {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
 
-  &__menu {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 30px;
+//   &__menu {
+//     display: flex;
+//     justify-content: space-between;
+//     column-gap: 30px;
 
-    @include small-tablet {
+//     @include small-tablet {
 
-    }
-  }
+//     }
+//   }
 
-  &__catalog {
-    @include small-tablet {
-      grid-area: catalog;
-    }
-  }
+//   &__catalog {
+//     @include small-tablet {
+//       grid-area: catalog;
+//     }
+//   }
 
-  &__mark {
-    @include small-tablet {
-      display: none;
-    }
-  }
+//   &__mark {
+//     @include small-tablet {
+//       display: none;
+//     }
+//   }
 
-  &__blog {
-    @include small-tablet {
-      display: none;
-    }
-  }
+//   &__blog {
+//     @include small-tablet {
+//       display: none;
+//     }
+//   }
 
-  &__shopbtn {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    column-gap: 10px;
-  }
+//   &__shopbtn {
+//     display: flex;
+//     justify-content: end;
+//     align-items: center;
+//     column-gap: 10px;
+//   }
 
-  &__shopbtn span {
-    @include small-tablet {
-      display: none;
-    }
-  }
+//   &__shopbtn span {
+//     @include small-tablet {
+//       display: none;
+//     }
+//   }
 
-  &__partner-prog {
-    display: none;
-  }
+//   &__partner-prog {
+//     display: none;
+//   }
 
-  &__logo {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 0;
-    font-size: 0;
+//   &__logo {
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     line-height: 0;
+//     font-size: 0;
 
-    @include small-tablet {
+//     @include small-tablet {
 
-    }
-  }
+//     }
+//   }
 
-  &__logo-img {
-    display: inline-flex;
-    align-items: center;
-  }
+//   &__logo-img {
+//     display: inline-flex;
+//     align-items: center;
+//   }
 
-  &__search {
+//   &__search {
 
-  }
-}
+//   }
+// }
