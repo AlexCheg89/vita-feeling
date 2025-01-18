@@ -1,3 +1,79 @@
+.header {
+  padding: 10px 0;
+  border: 1px solid #dadada;
+  color: rgb(89, 89, 89);
+
+  &__container {
+    display: grid;
+    grid-template-columns: 11% 11% 11% 33% 11% 11% 11%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "phone contacts contacts logo login login login"
+    "catalog mark blog logo parprogram cart search"
+    ;
+    align-items: center;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  &__container a {
+    border: 1px solid green;
+  }
+
+  &__phone {
+    grid-area: phone;
+  }
+
+  &__contacts {
+    grid-area: contacts;
+  }
+
+  &__logo {
+    grid-area: logo;
+    text-align: center;
+  }
+
+  &__login {
+    grid-area: login;
+    text-align: right;
+  }
+
+  &__catalog {
+    grid-area: catalog;
+  }
+
+  &__mark {
+    grid-area: mark;
+  }
+
+  &__blog {
+    grid-area: blog;
+  }
+
+  &__program {
+    grid-area: parprogram;
+  }
+
+  &__cart {
+    grid-area: cart;
+  }
+
+  &__search {
+    position: relative;
+    grid-area: search;
+    display: flex;
+    width: 100%;
+  }
+  &__search-input {
+    width: 100%;
+  }
+
+  &__search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
 // .header {
 
 //   padding: 20px 0;
