@@ -1,68 +1,171 @@
 .header {
   padding: 10px 0;
   border: 1px solid #dadada;
-  color: rgb(89, 89, 89);
+  color: #595959;
 
   &__container {
     display: grid;
-    grid-template-columns: 11% 11% 11% 33% 11% 11% 11%;
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-    "phone contacts contacts logo login login login"
-    "catalog mark blog logo parprogram cart search"
+    "phone phone contacts contacts logo logo logo logo . login login login"
+    "catalog catalog nav nav logo logo logo logo  parprogram parprogram parprogram cart"
     ;
     align-items: center;
     font-size: 16px;
+    @include adaptive-value('font-size' , 16, 12, 3);
     line-height: 32px;
-  }
+    gap: 5px;
 
-  &__container a {
-    border: 1px solid green;
+    @include small-tablet {
+      grid-template-columns: 11% 26% 1fr 15% 10%;
+      grid-template-rows: repeat(1, auto);
+      grid-template-areas: "catalog phone logo contacts cart";
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(1, auto);
+      grid-template-areas: "catalog phone phone . logo logo logo logo . cart cart cart";
+    }
   }
 
   &__phone {
     grid-area: phone;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    @include adaptive-value("gap", 15, 1, 3);
+    @include small-tablet {
+      justify-content: center;
+    }
+    @include mobile {
+      justify-content: start;
+    }
+  }
+
+  &__phone img {
+    width: 19px;
+  }
+
+  &__phone-text {
+    @include adaptive-value("letter-spacing", 1, -4, 3);
+    @include mobile {
+      display: none;
+    }
   }
 
   &__contacts {
     grid-area: contacts;
+    @include small-tablet {
+      @include small-tablet {
+        text-align: center;
+      }
+    }
+    @include mobile {
+      display: none;
+    }
   }
 
   &__logo {
     grid-area: logo;
     text-align: center;
+    line-height: 0;
+    font-size: 0;
   }
 
   &__login {
     grid-area: login;
     text-align: right;
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__catalog {
     grid-area: catalog;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__catalog-text {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__nav {
+    grid-column: span 2;
+    grid-row: nav;
+    display: flex;
+    text-align: center;
+    gap: 5px;
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__mark {
     grid-area: mark;
+    // padding: 0 15px;
   }
 
   &__blog {
     grid-area: blog;
+    //padding: 0 15px;
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__program {
     grid-area: parprogram;
+    text-align: right;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__btns {
+    grid-area: cart;
+    display: flex;
+    gap: 10px;
+    justify-content: end;
   }
 
   &__cart {
-    grid-area: cart;
+    position: relative;
+    padding: 0 5px;
+    line-height: 0;
+    font-size: 0;
+  }
+
+  &__cart-quantity {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    top: -10px;
+    right: -10px;
+    font-size: 14px;
+    background-color: #f7875b;
+    border-radius: 50px;
+
   }
 
   &__search {
     position: relative;
     grid-area: search;
     display: flex;
-    width: 100%;
+    width: 24px;
+
   }
   &__search-input {
     width: 100%;
@@ -70,163 +173,15 @@
 
   &__search-btn {
     position: absolute;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
     top: 0;
     right: 0;
+    width: 24px;
+  }
+
+  &__search-btn svg{
+    fill: #595959;
   }
 }
-// .header {
-
-//   padding: 20px 0;
-//   border: 1px solid #dadada;
-//   color: rgb(89, 89, 89);
-
-//   &__container {
-//     position: relative;
-
-//     @include small-tablet {
-//       display: grid;
-//       grid-template-columns: repeat(4 auto);
-//       grid-template-areas:
-//         "catalog phone contacts card";
-//     }
-//   }
-
-//   &__top {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-
-//     @include small-tablet {
-
-//     }
-//   }
-
-//   &__contacts {
-//     display: flex;
-//     width: 33%;
-//     align-items: center;
-//     column-gap: 15px;
-//     border-bottom: 2px solid grey;
-
-//     @include tablet {
-//       width: 30%;
-//     }
-
-//     @include small-tablet {
-//       justify-content: space-between;
-//       width: 100%;
-//       border: 0;
-//     }
-
-//     span {
-//       @include small-tablet {
-//         display: none;
-//       }
-//     }
-//   }
-
-//   &__contacts span {
-//     font-size: 15px;
-//     line-height: 32px;
-//   }
-
-//   &__phonelink {
-//     font-size: 15px;
-//     line-height: 32px;
-
-//     @include small-tablet {
-//       display: block;
-//       grid: phone;
-//     }
-//   }
-
-//   &__contacts-btn {
-//     font-size: 15px;
-//     line-height: 32px;
-
-//     @include small-tablet {
-//       display: block;
-//       grid-area: contacts;
-//     }
-//   }
-
-//   &__login {
-//     @include small-tablet {
-//       display: none;
-//       opacity: 0;
-//     }
-//   }
-
-//   &__bottom {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//   }
-
-//   &__menu {
-//     display: flex;
-//     justify-content: space-between;
-//     column-gap: 30px;
-
-//     @include small-tablet {
-
-//     }
-//   }
-
-//   &__catalog {
-//     @include small-tablet {
-//       grid-area: catalog;
-//     }
-//   }
-
-//   &__mark {
-//     @include small-tablet {
-//       display: none;
-//     }
-//   }
-
-//   &__blog {
-//     @include small-tablet {
-//       display: none;
-//     }
-//   }
-
-//   &__shopbtn {
-//     display: flex;
-//     justify-content: end;
-//     align-items: center;
-//     column-gap: 10px;
-//   }
-
-//   &__shopbtn span {
-//     @include small-tablet {
-//       display: none;
-//     }
-//   }
-
-//   &__partner-prog {
-//     display: none;
-//   }
-
-//   &__logo {
-//     position: absolute;
-//     top: 0;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     line-height: 0;
-//     font-size: 0;
-
-//     @include small-tablet {
-
-//     }
-//   }
-
-//   &__logo-img {
-//     display: inline-flex;
-//     align-items: center;
-//   }
-
-//   &__search {
-
-//   }
-// }

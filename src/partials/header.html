@@ -1,22 +1,36 @@
 <header class="header">
   <div class="container header__container">
-    <a href="tel:88009502323" class="header__phone">8 (800) 950 23 23</a>
+    <a href="tel:88009502323" class="header__phone">
+      <img src="/img/icons/icon-tel.png" alt="phone">
+      <span class="header__phone-text">8 (800) 950 23 23</span>
+    </a>
     <a href="" class="header__contacts">Контакты</a>
     <a href="#" class="header__logo">
       <img class="header__logo-img" src="/img/logo.png" alt="Лого">
     </a>
     <a href="" class="header__login">Вход / Регистрация</a>
-    <a href="" class="header__catalog">Каталог</a>
-    <a href="" class="header__mark">Наша марка</a>
-    <a href="" class="header__blog">Блог</a>
-    <a href="" class="header__program">Партнерская программа</a>
-    <a href="" class="header__cart">
-      <img src="/img/icons/icon-cart.png" alt="Cart">
+    <a href="" class="header__catalog">
+      <img src="/img/icons/icon-burger.png" alt="burger">
+      <span class="header__catalog-text">Каталог</span>
     </a>
-    <form class="header__search" action="">
-      <input class="header__search-input" type="search">
-      <button class="header__search-btn" type="submit">поиск</button>
-    </form>
+    <div class="header__nav">
+      <a href="" class="header__mark">Наша марка</a>
+      <a href="" class="header__blog">Блог</a>
+    </div>
+    <a href="" class="header__program">Партнерская программа</a>
+    <div class="header__btns">
+      <a href="" class="header__cart">
+        <img src="/img/icons/icon-cart.png" alt="Cart">
+        <span class="header__cart-quantity">10</span>
+      </a>
+      <form class="header__search" action="">
+        <input class="input-reset header__search-input" type="search">
+        <button class="btn-reset header__search-btn" type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px" ><path d="M 10 2 C 5.5965257 2 2 5.5965291 2 10 C 2 14.403471 5.5965257 18 10 18 C 11.752132 18 13.370523 17.422074 14.691406 16.458984 L 19.845703 21.613281 A 1.250125 1.250125 0 1 0 21.613281 19.845703 L 16.458984 14.691406 C 17.422074 13.370523 18 11.75213 18 10 C 18 5.5965291 14.403474 2 10 2 z M 10 4.5 C 13.052375 4.5 15.5 6.947627 15.5 10 C 15.5 13.052373 13.052375 15.5 10 15.5 C 6.9476251 15.5 4.5 13.052373 4.5 10 C 4.5 6.947627 6.9476251 4.5 10 4.5 z"/></svg>
+
+        </button>
+      </form>
+    </div>
     <!-- <div class="header__top">
       <div class="header__contacts">
         <a class="header__phonelink" href="tel:+79266064028">+7 926 606 40 28</a>
