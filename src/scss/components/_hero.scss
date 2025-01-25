@@ -1,12 +1,13 @@
 .hero {
   height: 100%;
+  background-color: #fafafa;
   background: url('/../img/hero-bg.jpg') center / cover no-repeat;
   padding-bottom: 220px;
   border: 1px solid yellow;
-  @include small-tablet {
-    background: url('/../img/hero-bg2.png') center / contain no-repeat;
-    padding-bottom: 50px;
-  }
+  // @include small-tablet {
+  //   background: url('/../img/hero-bg2.png') center / contain no-repeat;
+  //   padding-bottom: 50px;
+  // }
 
   &__content {
     padding-top: 50px;
