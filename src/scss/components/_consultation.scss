@@ -1,0 +1,20 @@
+.consultation {
+  background-color: #f89553;
+  padding: 50px 0;
+
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    background: url('/../img/logo-big.png') left / contain no-repeat;
+  }
+
+  &__content {
+    padding: 10px 0px 0px 100px;
+    width: 50%;
+  }
+
+  &__container img {
+    margin-bottom: -50px;
+  }
+
+}
