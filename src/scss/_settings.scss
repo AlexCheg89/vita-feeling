@@ -141,3 +141,42 @@ a {
   font-size: 44px;
   font-weight: 700;
 }
+
+.btn {
+  padding: 6px 40px;
+  font-family: "Montserrat";
+  font-size: 15px;
+  color: rgb(254, 254, 254);
+  font-weight: bold;
+  line-height: 3.067;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+
+  @include mobile {
+    padding: 6px 20px;
+
+  }
+
+  @include mobile-480 {
+    min-width: 209px;
+  }
+
+  &__more {
+    background-color: rgb(247, 135, 91);
+  }
+
+  &__more:hover {
+    background-color: rgb(120, 212, 96);
+  }
+
+  &__catalog{
+    background-color: rgb(120, 212, 96);
+  }
+
+  &__catalog:hover {
+    background-color: rgb(247, 135, 91);
+  }
+}
+
+
