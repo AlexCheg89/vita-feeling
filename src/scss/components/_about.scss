@@ -1,0 +1,62 @@
+.about {
+  background: url('/../img/about-bg.jpg') center / cover no-repeat;
+  &__title {
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: var(--light-color);
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.278;
+  }
+
+  &__title-img {
+    position: relative;
+    padding: 0 45px;
+    top: 15px;
+  }
+
+  &__subtitle {
+    margin-bottom: 58px;
+    font-family: var(--font-family-main-title);
+    font-size: 24px;
+    color: var(--light-color);
+    font-weight: 200;
+    font-style: italic;
+    line-height: 1.501;
+    text-align: center;
+  }
+}
+
+.about-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+
+  &__item {
+    display: block;
+    margin-bottom: 50px;
+    width: 70%;
+  }
+
+  // &__item:not(:last-child) {
+  //   margin-bottom: 50px;
+  // }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 21px;
+    color: rgb(255, 208, 82);
+    text-transform: uppercase;
+    line-height: 1.81;
+  }
+
+  &__desc {
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--light-color);
+  }
+}
+
+
