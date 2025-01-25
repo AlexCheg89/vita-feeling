@@ -1,0 +1,70 @@
+.blog {
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 38px;
+    text-align: center;
+    font-family: var(--font-family-main-title);
+    font-size: 18px;
+    color: rgb(149, 149, 149);
+    font-style: italic;
+    line-height: 1.667;
+  }
+
+  &__artical-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  &__article {
+    padding: 20px;
+    box-shadow: 2px 6px 12px #4444442e;
+    min-width: 218px;
+
+    &:hover {
+      box-shadow: 2px 3px 14px #b2c5ad;
+    }
+  }
+
+  &__article-rublic {
+    font-size: 15px;
+    font-family: "Montserrat";
+    color: rgb(101, 192, 78);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 3.067;
+  }
+
+  &__article-title {
+    height:54px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    font-size: 23px;
+    font-family: var(--font-family-main-title);
+    color: rgb(58, 58, 58);
+    font-weight: bold;
+    line-height: 1.167;
+  }
+
+  &__article-text {
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-family: "Roboto";
+    color: rgb(106, 106, 109);
+    line-height: 1.75;
+  }
+
+  &__btn {
+    background-color: rgb(120, 212, 96);
+    min-width: 196px;
+
+    &:hover {
+      background-color: rgb(247, 135, 91);
+    }
+  }
+}
