@@ -22,12 +22,14 @@ h1,h2,h3,h4 {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   //max-width: var(--container-width);
+  //margin: 0 auto;
   border: 1px solid green;
 }
 
 .page__body {
   //max-width: var(--content-width);
-  min-width: 360px;
+  //margin: 0 auto;
+  min-width: 320px;
   //min-height: 100%;
   font-size: 16px;
   border: 1px solid red;
@@ -57,6 +59,11 @@ a {
 
 .footer {
   flex: 0 0 auto;
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .is-hidden {
@@ -128,4 +135,9 @@ a {
 
 .hero__list-title, .title {
   font-family: var(--font-family-title);
+}
+
+.title {
+  font-size: 44px;
+  font-weight: 700;
 }
