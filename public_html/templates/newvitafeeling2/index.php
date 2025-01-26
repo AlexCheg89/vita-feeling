@@ -1,34 +1,43 @@
 <?php
-  defined('_JEXEC') or die;
+defined('_JEXEC') or die;
 
-  $doc = jFactory::getDocument();
+/**
+ * Template for Joomla! CMS, created with Artisteer.
+ * See readme.txt for more details on how to use the template.
+ */
 
-  $doc->addStyleSheet(JUri::base(true) . "templates/" . $doc->templates . "/main.css");
+//require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'functions.php';
+
+// Create alias for $this object reference:
+$document = $this;
+
+// Shortcut for template base url:
+$templateUrl = $document->baseurl . '/templates/' . $document->template;
+
+//Artx::load("Artx_Page");
+
+// Initialize $view:
+//$view = $this->artx = new ArtxPage($this);
+
+// Decorate component with Artisteer style:
+//$view->componentWrapper();
+
+//JHtml::_('behavior.framework', true);
 ?>
 
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html xmlns="http://www.w3.org/1999/xhtml" class="page">
 
 <head>
-  <!-- <jdoc:include type="head" />
+  <jdoc:include type="head" />
   <link rel="stylesheet" href="<?php echo $document->baseurl; ?>/templates/system/css/system.css" />
   <link rel="stylesheet" href="<?php echo $document->baseurl; ?>/templates/system/css/general.css" />
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#111111">
-  <title>Vita-feeling</title>
-  <link rel="preload" href="<?php echo $templateUrl; ?>/fonts/Roboto.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="<?php echo $templateUrl; ?>/fonts/Philosopher.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="<?php echo $templateUrl; ?>/fonts/Exo2-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="<?php echo $templateUrl; ?>/fonts/Exo2.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="<?php echo $templateUrl; ?>/fonts/Montserrat.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="<?php echo $templateUrl; ?>/fonts/Oswald.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" type="text/css" href="<?php echo $templateUrl; ?>/css/vendor.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo $templateUrl; ?>/css/main.css">
-  <script defer src="<?php echo $templateUrl; ?>/js/main.js"></script> -->
+  <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+
+
+  <link rel="stylesheet" href="<?php echo $templateUrl; ?>/css/vendor.css">
+  <link rel="stylesheet" href="<?php echo $templateUrl; ?>/css/main.css" media="all">
 </head>
 
 <body class="page__body">
@@ -36,7 +45,7 @@
     <header class="header">
   <div class="container header__container">
     <a href="tel:88009502323" class="header__phone">
-      <img src="<?php echo $templateUrl; ?>images/icons/icon-tel.png" alt="phone">
+      <img src="<?php echo $templateUrl; ?>/images/icons/icon-tel.png" alt="phone">
       <span class="header__phone-text">8 (800) 950 23 23</span>
     </a>
     <a href="" class="header__contacts">Контакты</a>
@@ -84,19 +93,19 @@
         </li>
         <li class="hero__list-item">
           <a class="hero__list-link" href="">
-            <img class="hero__list-img" src="/img/icons/icon_mineral.png" alt="Минералы">
+            <img class="hero__list-img" src="<?php echo $templateUrl; ?>/images/icons/icon_mineral.png" alt="Минералы">
             <h2 class="hero__list-title">Минералы</h2>
           </a>
         </li>
         <li class="hero__list-item">
           <a class="hero__list-link" href="">
-            <img class="hero__list-img" src="/img/icons/icon_purpose.png" alt="Назначение">
+            <img class="hero__list-img" src="<?php echo $templateUrl; ?>/images/icons/icon_purpose.png" alt="Назначение">
             <h2 class="hero__list-title">Назначение</h2>
           </a>
         </li>
         <li class="hero__list-item">
           <a class="hero__list-link" href="">
-            <img class="hero__list-img" src="/img/icons/icon_mark.png" alt="Наша марка">
+            <img class="hero__list-img" src="<?php echo $templateUrl; ?>/images/icons/icon_mark.png" alt="Наша марка">
             <h2 class="hero__list-title">Наша марка</h2>
           </a>
         </li>
@@ -116,14 +125,14 @@
           <h3 class="product-item__title">100% ОРГАНИЧЕСКИЙ</h3>
           <p class="product-item__decr">Мы производим наши продукты из свежих 100% — органических ингредиентов, полных витаминов и ценных питательных веществ</p>
         </div>
-        <img class="product-item__img" src="/img/icons/icon_organic.png" alt="Органический">
+        <img class="product-item__img" src="<?php echo $templateUrl; ?>/images/icons/icon_organic.png" alt="Органический">
       </li>
       <li class="about-product__item product-item">
         <div class="product-item__textbl">
           <h3 class="product-item__title">ПОЛЕЗЕН ДЛЯ ЗДОРОВЬЯ</h3>
           <p class="product-item__decr">Наши добавки разработаны для обогащения организма полезными веществами, чтобы укрепить ваше здоровье на всех уровнях</p>
         </div>
-        <img class="product-item__img" src="/img/icons/icon_health.png" alt="Здоровье">
+        <img class="product-item__img" src="<?php echo $templateUrl; ?>/images/icons/icon_health.png" alt="Здоровье">
       </li>
 
       <li class="about-product__item product-item">
@@ -131,16 +140,16 @@
           <h3 class="product-item__title">БЕЗ ХИМИИ</h3>
           <p class="product-item__decr">Наши полезные добавки к пище не содержат искусственных веществ, а содержат только натуральные жизненно важные элементы</p>
         </div>
-        <img class="product-item__img" src="/img/icons/icon_chemistry.png" alt="Химия">
+        <img class="product-item__img" src="<?php echo $templateUrl; ?>/images/icons/icon_chemistry.png" alt="Химия">
       </li>
       <li class="about-product__item product-item">
         <div class="product-item__textbl">
           <h3 class="product-item__title">ЗАРЯЖАЕТ ЭНЕРГИЕЙ</h3>
           <p class="product-item__decr">Наши продукты созданы как универсальные органические источники повышения уровня энергии для полноценной жизни</p>
         </div>
-        <img class="product-item__img" src="/img/icons/icon_energy.png" alt="Энергия">
+        <img class="product-item__img" src="<?php echo $templateUrl; ?>/images/icons/icon_energy.png" alt="Энергия">
       </li>
-      <img class="about-product__bud product__img" src="/img/bud.png" alt="Бад">
+      <img class="about-product__bud product__img" src="<?php echo $templateUrl; ?>/images/bud.png" alt="Бад">
     </ul>
   </div>
 </section>
@@ -149,7 +158,7 @@
   <div class="container">
     <h2 class="title about__title">
       О КОМПАНИИ
-      <img class="about__title-img" src="/img/logo2.png" alt="Лого">
+      <img class="about__title-img" src="<?php echo $templateUrl; ?>/images/logo2.png" alt="Лого">
       VITAFEELING
     </h2>
     <p class="subtitle about__subtitle">Мы заботимся о Вашем здоровье</p>
@@ -179,156 +188,156 @@
     <ul class="list-reset assortment__grid">
       <li class="assortment__grid-item">
         <article class="product">
-          <img class="product__img" src="/img/product1.jpg" alt="Тропи Фермент">
+          <img class="product__img" src="<?php echo $templateUrl; ?>/images/product1.jpg" alt="Тропи Фермент">
           <h3 class="product__name">Тропи Фермент</h3>
           <div class="product__info">
             <span class="product__formfact">60 таб</span>
             <span class="product__cost">1250 ₽</span>
             <button class="btn-reset product__cart">
-              <img src="/img/icons/icon-cart.png" alt="Корзина">
+              <img src="<?php echo $templateUrl; ?>/images/icons/icon-cart.png" alt="Корзина">
             </button>
           </div>
         </article>
       </li>
       <li class="assortment__grid-item">
         <article class="product">
-          <img class="product__img" src="/img/product2.jpg" alt="Морской йод из фикуса">
+          <img class="product__img" src="<?php echo $templateUrl; ?>/images/product2.jpg" alt="Морской йод из фикуса">
           <h3 class="product__name">Морской йод из фикуса</h3>
           <div class="product__info">
             <span class="product__formfact">60 таб</span>
             <span class="product__cost">1250 ₽</span>
             <button class="btn-reset product__cart">
-              <img src="/img/icons/icon-cart.png" alt="Корзина">
+              <img src="<?php echo $templateUrl; ?>/images/icons/icon-cart.png" alt="Корзина">
             </button>
           </div>
         </article>
       </li>
       <li class="assortment__grid-item">
         <article class="product">
-          <img class="product__img" src="/img/product1.jpg" alt="Тропи Фермент">
+          <img class="product__img" src="<?php echo $templateUrl; ?>/images/product1.jpg" alt="Тропи Фермент">
           <h3 class="product__name">Тропи Фермент</h3>
           <div class="product__info">
             <span class="product__formfact">60 таб</span>
             <span class="product__cost">1250 ₽</span>
             <button class="btn-reset product__cart">
-              <img src="/img/icons/icon-cart.png" alt="Корзина">
+              <img src="<?php echo $templateUrl; ?>/images/icons/icon-cart.png" alt="Корзина">
             </button>
           </div>
         </article>
       </li>
       <li class="assortment__grid-item">
         <article class="product">
-          <img class="product__img" src="/img/product2.jpg" alt="Морской йод из фикуса">
+          <img class="product__img" src="<?php echo $templateUrl; ?>/images/product2.jpg" alt="Морской йод из фикуса">
           <h3 class="product__name">Морской йод из фикуса</h3>
           <div class="product__info">
             <span class="product__formfact">60 таб</span>
             <span class="product__cost">1250 ₽</span>
             <button class="btn-reset product__cart">
-              <img src="/img/icons/icon-cart.png" alt="Корзина">
+              <img src="<?php echo $templateUrl; ?>/images/icons/icon-cart.png" alt="Корзина">
             </button>
           </div>
         </article>
       </li>
       <li class="assortment__grid-item">
         <article class="product">
-          <img class="product__img" src="/img/product1.jpg" alt="Тропи Фермент">
+          <img class="product__img" src="<?php echo $templateUrl; ?>/images/product1.jpg" alt="Тропи Фермент">
           <h3 class="product__name">Тропи Фермент</h3>
           <div class="product__info">
             <span class="product__formfact">60 таб</span>
             <span class="product__cost">1250 ₽</span>
             <button class="btn-reset product__cart">
-              <img src="/img/icons/icon-cart.png" alt="Корзина">
+              <img src="<?php echo $templateUrl; ?>/images/icons/icon-cart.png" alt="Корзина">
             </button>
           </div>
         </article>
       </li>
       <li class="assortment__grid-item">
         <article class="product">
-          <img class="product__img" src="/img/product2.jpg" alt="Морской йод из фикуса">
+          <img class="product__img" src="<?php echo $templateUrl; ?>/images/product2.jpg" alt="Морской йод из фикуса">
           <h3 class="product__name">Морской йод из фикуса</h3>
           <div class="product__info">
             <span class="product__formfact">60 таб</span>
             <span class="product__cost">1250 ₽</span>
             <button class="btn-reset product__cart">
-              <img src="/img/icons/icon-cart.png" alt="Корзина">
+              <img src="<?php echo $templateUrl; ?>/images/icons/icon-cart.png" alt="Корзина">
             </button>
           </div>
         </article>
       </li>
       <li class="assortment__grid-item">
         <article class="product">
-          <img class="product__img" src="/img/product1.jpg" alt="Тропи Фермент">
+          <img class="product__img" src="<?php echo $templateUrl; ?>/images/product1.jpg" alt="Тропи Фермент">
           <h3 class="product__name">Тропи Фермент</h3>
           <div class="product__info">
             <span class="product__formfact">60 таб</span>
             <span class="product__cost">1250 ₽</span>
             <button class="btn-reset product__cart">
-              <img src="/img/icons/icon-cart.png" alt="Корзина">
+              <img src="<?php echo $templateUrl; ?>/images/icons/icon-cart.png" alt="Корзина">
             </button>
           </div>
         </article>
       </li>
       <li class="assortment__grid-item">
         <article class="product">
-          <img class="product__img" src="/img/product2.jpg" alt="Морской йод из фикуса">
+          <img class="product__img" src="<?php echo $templateUrl; ?>/images/product2.jpg" alt="Морской йод из фикуса">
           <h3 class="product__name">Морской йод из фикуса</h3>
           <div class="product__info">
             <span class="product__formfact">60 таб</span>
             <span class="product__cost">1250 ₽</span>
             <button class="btn-reset product__cart">
-              <img src="/img/icons/icon-cart.png" alt="Корзина">
+              <img src="<?php echo $templateUrl; ?>/images/icons/icon-cart.png" alt="Корзина">
             </button>
           </div>
         </article>
       </li>
       <li class="assortment__grid-item">
         <article class="product">
-          <img class="product__img" src="/img/product1.jpg" alt="Тропи Фермент">
+          <img class="product__img" src="<?php echo $templateUrl; ?>/images/product1.jpg" alt="Тропи Фермент">
           <h3 class="product__name">Тропи Фермент</h3>
           <div class="product__info">
             <span class="product__formfact">60 таб</span>
             <span class="product__cost">1250 ₽</span>
             <button class="btn-reset product__cart">
-              <img src="/img/icons/icon-cart.png" alt="Корзина">
+              <img src="<?php echo $templateUrl; ?>/images/icons/icon-cart.png" alt="Корзина">
             </button>
           </div>
         </article>
       </li>
       <li class="assortment__grid-item">
         <article class="product">
-          <img class="product__img" src="/img/product2.jpg" alt="Морской йод из фикуса">
+          <img class="product__img" src="<?php echo $templateUrl; ?>/images/product2.jpg" alt="Морской йод из фикуса">
           <h3 class="product__name">Морской йод из фикуса</h3>
           <div class="product__info">
             <span class="product__formfact">60 таб</span>
             <span class="product__cost">1250 ₽</span>
             <button class="btn-reset product__cart">
-              <img src="/img/icons/icon-cart.png" alt="Корзина">
+              <img src="<?php echo $templateUrl; ?>/images/icons/icon-cart.png" alt="Корзина">
             </button>
           </div>
         </article>
       </li>
       <li class="assortment__grid-item">
         <article class="product">
-          <img class="product__img" src="/img/product1.jpg" alt="Тропи Фермент">
+          <img class="product__img" src="<?php echo $templateUrl; ?>/images/product1.jpg" alt="Тропи Фермент">
           <h3 class="product__name">Тропи Фермент</h3>
           <div class="product__info">
             <span class="product__formfact">60 таб</span>
             <span class="product__cost">1250 ₽</span>
             <button class="btn-reset product__cart">
-              <img src="/img/icons/icon-cart.png" alt="Корзина">
+              <img src="<?php echo $templateUrl; ?>/images/icons/icon-cart.png" alt="Корзина">
             </button>
           </div>
         </article>
       </li>
       <li class="assortment__grid-item">
         <article class="product">
-          <img class="product__img" src="/img/product2.jpg" alt="Морской йод из фикуса">
+          <img class="product__img" src="<?php echo $templateUrl; ?>/images/product2.jpg" alt="Морской йод из фикуса">
           <h3 class="product__name">Морской йод из фикуса</h3>
           <div class="product__info">
             <span class="product__formfact">60 таб</span>
             <span class="product__cost">1250 ₽</span>
             <button class="btn-reset product__cart">
-              <img src="/img/icons/icon-cart.png" alt="Корзина">
+              <img src="<?php echo $templateUrl; ?>/images/icons/icon-cart.png" alt="Корзина">
             </button>
           </div>
         </article>
@@ -348,7 +357,7 @@
     <ul class="list-reset blog__artical-list">
       <li class="blog__artical-item">
         <article class="blog__article">
-          <img class="blog__article-img" src="/img/blog1.jpg" alt="">
+          <img class="blog__article-img" src="<?php echo $templateUrl; ?>/images/blog1.jpg" alt="">
           <p class="blog__article-rublic">наша марка</p>
           <h3 class="blog__article-title">Наша исследовательская лаборатория</h3>
           <p class="blog__article-text">Краткая выдержка из начала статьи</p>
@@ -357,7 +366,7 @@
       </li>
       <li class="blog__artical-item">
         <article class="blog__article">
-          <img class="blog__article-img" src="/img/blog2.jpg" alt="">
+          <img class="blog__article-img" src="<?php echo $templateUrl; ?>/images/blog2.jpg" alt="">
           <p class="blog__article-rublic">Витамины</p>
           <h3 class="blog__article-title">Витамины для человеческого организма и их полезность…</h3>
           <p class="blog__article-text">Краткая выдержка из начала статьи</p>
@@ -366,7 +375,7 @@
       </li>
       <li class="blog__artical-item">
         <article class="blog__article">
-          <img class="blog__article-img" src="/img/blog3.jpg" alt="">
+          <img class="blog__article-img" src="<?php echo $templateUrl; ?>/images/blog3.jpg" alt="">
           <p class="blog__article-rublic">Целебные растения</p>
           <h3 class="blog__article-title">Фитостерины — исцеляющие свойства многих</h3>
           <p class="blog__article-text">Краткая выдержка из начала статьи</p>
@@ -379,7 +388,7 @@
 
       <section class="consultation">
   <div class="container consultation__container">
-    <img src="/img/doctor.png" alt="Доктор">
+    <img src="<?php echo $templateUrl; ?>/images/doctor.png" alt="Доктор">
     <div class="consultation__content">
       <h2 class="title consultation__title">Консультация специалиста</h2>
       <p class="consultation__text">Если вы не знаете, что из продукции Vitafeeling лучше подойдёт для вашего здоровья, но наш специалист проконсультирует ва и поможет подобрать подходящий монопрепарат или курс препаратов, исходя из индивидуальных особенностей и потребностей вашего организма. Эта услуга совершенно бесплатна, просто заполните форму и мы свяжемся с вами:</p>
@@ -398,10 +407,10 @@
       <li class="footer__title">Присоединяйтесь</li>
       <li class="footer__item">Наши группы в соцсетях:</li>
       <li class="footer__item footer__social">
-        <a href=""><img src="/img/icons/icon_teleg.png" alt="Телеграмм"></a>
-        <a href=""><img src="/img/icons/icon_insta.png" alt="Истаграм"></a>
-        <a href=""><img src="/img/icons/icon_ok.png" alt="Одноклассники"></a>
-        <a href=""><img src="/img/icons/icon_gm.png" alt="GM"></a>
+        <a href=""><img src="<?php echo $templateUrl; ?>/images/icons/icon_teleg.png" alt="Телеграмм"></a>
+        <a href=""><img src="<?php echo $templateUrl; ?>/images/icons/icon_insta.png" alt="Истаграм"></a>
+        <a href=""><img src="<?php echo $templateUrl; ?>/images/icons/icon_ok.png" alt="Одноклассники"></a>
+        <a href=""><img src="<?php echo $templateUrl; ?>/images/icons/icon_gm.png" alt="GM"></a>
       </li>
 
     </ul>
