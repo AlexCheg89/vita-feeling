@@ -1,21 +1,61 @@
 .hero {
   height: 100%;
   background-color: #fafafa;
-  background: url('/../img/hero-bg.jpg') center / cover no-repeat;
-  padding-bottom: 220px;
+  //background: url('../img/hero-bg.jpg') center / cover no-repeat;
+  //padding-bottom: 220px;
   // @include small-tablet {
   //   background: url('/../img/hero-bg2.png') center / contain no-repeat;
   //   padding-bottom: 50px;
   // }
 
+  // @include small-tablet {
+  //   background-position: center right;
+  //   background-size: 125%;
+  //   padding-bottom: 20px;
+  // }
+
   &__content {
-    padding-top: 50px;
-    width: 45%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    grid-template-areas:
+    "content image"
+    "buttons image"
+    ;
+    //padding-top: 50px;
+    //width: 45%;
+
+    @include tablet {
+      padding-top: 0;
+    }
+
     @include small-tablet {
-      width: 100%;
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "content"
+        "image"
+        "buttons"
+      ;
+    }
+
+    @include mobile {
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "image"
+        "content"
+        "buttons"
+      ;
     }
 
   }
+
+  &__main {
+    grid-area: content;
+  }
+
   &__title {
     margin-bottom: 30px;
     font-family: var(--font-family-main-title);
@@ -39,18 +79,33 @@
     margin-bottom: 50px;
     font-style: italic;
     color: #595959;
-    @include small-tablet {
-      margin-bottom: 500px;
+    @include tablet {
+      margin-bottom: 25px;
     }
   }
 
   &__list {
+    grid-area: buttons;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 
     @include small-tablet {
       grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    @include mobile-480 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    @include small-mobile {
+      grid-template-columns: 100%;
     }
   }
 
@@ -59,7 +114,7 @@
   }
 
   &__list-item {
-    width: 100%;
+    //min-width: 280px;
     height: 100%;
     color: var(--light-color);
   }
@@ -88,6 +143,11 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+
+    @include tablet {
+      padding: 40px 20px;
+    }
+
     @include small-tablet {
       padding: 20px;
     }
@@ -99,5 +159,18 @@
 
   &__list-img {
     width: 60px;
+  }
+
+  &__bg-img {
+    grid-area: image;
+    display: block;
+    width: 125%;
+    //object-fit: cover;
+
+    @include small-tablet {
+      position: relative;
+      right: -15px;
+      width: 100% !important;
+    }
   }
 }
