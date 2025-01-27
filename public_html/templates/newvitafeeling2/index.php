@@ -14,6 +14,10 @@ $document = $this;
 // Shortcut for template base url:
 $templateUrl = $document->baseurl . '/templates/' . $document->template;
 
+$app = JFactory::getApplication();
+
+
+
 //Artx::load("Artx_Page");
 
 // Initialize $view:
@@ -50,7 +54,7 @@ $templateUrl = $document->baseurl . '/templates/' . $document->template;
     </a>
     <a href="" class="header__contacts">Контакты</a>
     <a href="#" class="header__logo">
-      <img class="header__logo-img" src="<?php echo $templateUrl; ?>/images/logo.png" alt="Лого">
+      <jdoc:include type="modules" name ="position-34"/>
     </a>
     <a href="" class="header__login">Вход / Регистрация</a>
     <a href="" class="header__catalog">
@@ -75,6 +79,39 @@ $templateUrl = $document->baseurl . '/templates/' . $document->template;
         </button>
       </form>
     </div>
+    <!-- <div class="header__top">
+      <div class="header__contacts">
+        <a class="header__phonelink" href="tel:+79266064028">+7 926 606 40 28</a>
+        <span>|</span>
+        <a class="header__contacts-btn"href="#">Контакты</a>
+      </div>
+      <div class="header__login">
+        <a href="">Вход / Регистрация</a>
+      </div>
+      <a href="#" class="header__logo">
+        <img class="header__logo-img" src="<?php echo $templateUrl; ?>/images/logo.png" alt="Лого">
+      </a>
+    </div>
+    <div class="header__bottom">
+      <nav class="nav header__nav">
+        <ul class="list-reset header__menu">
+          <li class="header__catalog"><a href="">Каталог</a></li>
+          <li class="header__mark"><a href="">Наша марка</a></li>
+          <li class="header__blog"><a href="">Блог</a></li>
+        </ul>
+      </nav>
+      <div class="header__shopbtn">
+        <a class="header__partner-prog" href="">Партнерская программа</a>
+        <span> | </span>
+        <a href="">
+          <img src="<?php echo $templateUrl; ?>/images/icons/icon-cart.png" alt="Cart">
+        </a>
+        <form class="header__search">
+          <input type="text" class="input" placeholder="Поиск">
+          <button type="submit"></button>
+        </form>
+      </div>
+    </div> -->
   </div>
 </header>
 
@@ -82,8 +119,10 @@ $templateUrl = $document->baseurl . '/templates/' . $document->template;
       <section class="section hero">
   <div class="container hero__container">
     <div class="hero__content">
-      <h1 class="hero__title">ПИЩЕВЫЕ ДОБАВКИ <span>ПОЛЕЗНЫ ДЛЯ ЗДОРОВЬЯ</span></h1>
-      <p class="hero__descr">Натуральные биологически активные добавки к пище для вашего здоровья, красоты и активного долголетия</p>
+      <div class="hero__main">
+        <h1 class="hero__title">ПИЩЕВЫЕ ДОБАВКИ <span>ПОЛЕЗНЫ ДЛЯ ЗДОРОВЬЯ</span></h1>
+        <p class="hero__descr">Натуральные биологически активные добавки к пище для вашего здоровья, красоты и активного долголетия</p>
+      </div>
       <ul class="list-reset hero__list">
         <li class="hero__list-item">
           <a class="hero__list-link" href="">
@@ -110,11 +149,14 @@ $templateUrl = $document->baseurl . '/templates/' . $document->template;
           </a>
         </li>
       </ul>
+      <div class="hero__bg-img">
+        <img src="<?php echo $templateUrl; ?>/images/hero-bg.png" alt="">
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section about-product">
+      <section class="section about-product">
   <div class="container">
     <h2 class="title about-product__title">
       Наш Продукт
@@ -149,7 +191,7 @@ $templateUrl = $document->baseurl . '/templates/' . $document->template;
         </div>
         <img class="product-item__img" src="<?php echo $templateUrl; ?>/images/icons/icon_energy.png" alt="Энергия">
       </li>
-      <img class="about-product__bud product__img" src="<?php echo $templateUrl; ?>/images/bud.png" alt="Бад">
+      <img class="about-product__bud about-product__img" src="<?php echo $templateUrl; ?>/images/bud.png" alt="Бад">
     </ul>
   </div>
 </section>
