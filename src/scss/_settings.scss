@@ -136,7 +136,8 @@ a {
 }
 
 .title {
-  font-size: 44px;
+  //font-size: 44px;
+  @include adaptive-value('font-size', 44, 36, 3);
   font-weight: 700;
 }
 
