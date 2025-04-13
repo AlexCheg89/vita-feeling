@@ -1,0 +1,185 @@
+.contacts-info {
+  border: 1px solid red;
+
+  &__container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    gap: 20px;
+  }
+
+  &__container div {
+
+  }
+}
+
+.contacts-info-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 91px 120px;
+  border: 1px solid green;
+  background-color: rgb(255, 255, 255);
+
+  &__title {
+    margin-bottom: 42px;
+    font-family: var(--font-family-main-title);
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 1.001;
+    color: rgb(58, 58, 58);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contacts-info-form-block {
+  background-color: rgb(255, 255, 255);
+  padding: 91px 43px;
+}
+
+.Наши_контакты {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1920px;
+  height: 2123px;
+  z-index: 71;
+}
+.Телефон {
+  font-size: 34px;
+  font-family: "Exo 2";
+  color: rgb(58, 58, 58);
+  font-weight: bold;
+  line-height: 1.001;
+  text-align: left;
+  -moz-transform: matrix( 1,0,0,1.00000534942758,0,0);
+  -webkit-transform: matrix( 1,0,0,1.00000534942758,0,0);
+  -ms-transform: matrix( 1,0,0,1.00000534942758,0,0);
+  position: absolute;
+  left: 268.873px;
+  top: 763.453px;
+  z-index: 70;
+}
+.Иконка_телефон_ {
+  background-image: url("Иконка телефон .png");
+  position: absolute;
+  left: 268px;
+  top: 791px;
+  width: 42px;
+  height: 41px;
+  z-index: 69;
+}
+._8__800__950_23_23 {
+  font-size: 22px;
+  font-family: "Roboto";
+  color: rgb(106, 106, 109);
+  line-height: 1.535;
+  text-align: left;
+  -moz-transform: matrix( 0.99790193105675,0,0,0.99226178765467,0,0);
+  -webkit-transform: matrix( 0.99790193105675,0,0,0.99226178765467,0,0);
+  -ms-transform: matrix( 0.99790193105675,0,0,0.99226178765467,0,0);
+  position: absolute;
+  left: 327.064px;
+  top: 834.13px;
+  z-index: 68;
+}
+.Электронная_почта {
+  font-size: 34px;
+  font-family: "Exo 2";
+  color: rgb(58, 58, 58);
+  font-weight: bold;
+  line-height: 1.001;
+  text-align: left;
+  -moz-transform: matrix( 1,0,0,1.00000534942758,0,0);
+  -webkit-transform: matrix( 1,0,0,1.00000534942758,0,0);
+  -ms-transform: matrix( 1,0,0,1.00000534942758,0,0);
+  position: absolute;
+  left: 772.714px;
+  top: 763.492px;
+  z-index: 67;
+}
+.Иконка_конверт_ {
+  background-image: url("Иконка конверт .png");
+  position: absolute;
+  left: 772px;
+  top: 792px;
+  width: 43px;
+  height: 40px;
+  z-index: 66;
+}
+.semechkinr_hotmail_com {
+  font-size: 22px;
+  font-family: "Roboto";
+  color: rgb(106, 106, 109);
+  line-height: 1.534;
+  text-align: left;
+  -moz-transform: matrix( 0.99766966266178,0,0,0.99206994598751,0,0);
+  -webkit-transform: matrix( 0.99766966266178,0,0,0.99206994598751,0,0);
+  -ms-transform: matrix( 0.99766966266178,0,0,0.99206994598751,0,0);
+  position: absolute;
+  left: 832.068px;
+  top: 834.136px;
+  z-index: 65;
+}
+.Наш_адрес {
+  font-size: 34px;
+  font-family: "Exo 2";
+  color: rgb(58, 58, 58);
+  font-weight: bold;
+  line-height: 1.001;
+  text-align: left;
+  -moz-transform: matrix( 1,0,0,1.00000534942758,0,0);
+  -webkit-transform: matrix( 1,0,0,1.00000534942758,0,0);
+  -ms-transform: matrix( 1,0,0,1.00000534942758,0,0);
+  position: absolute;
+  left: 268.782px;
+  top: 1017.281px;
+  z-index: 64;
+}
+.Иконка_адрес_ {
+  background-image: url("Иконка адрес .png");
+  position: absolute;
+  left: 268px;
+  top: 1038px;
+  width: 47px;
+  height: 49px;
+  z-index: 63;
+}
+._125480__город_Москва__улица_Вилиса_Лациса__дом_6К1 {
+  font-size: 22px;
+  font-family: "Roboto";
+  color: rgb(106, 106, 109);
+  line-height: 1.554;
+  text-align: left;
+  -moz-transform: matrix( 0.99895515581026,0,0,1.00466174689311,0,0);
+  -webkit-transform: matrix( 0.99895515581026,0,0,1.00466174689311,0,0);
+  -ms-transform: matrix( 0.99895515581026,0,0,1.00466174689311,0,0);
+  position: absolute;
+  left: 330.351px;
+  top: 1087.729px;
+  z-index: 62;
+}
+.карта_ {
+  background-image: url("карта .png");
+  position: absolute;
+  left: 269px;
+  top: 1144px;
+  width: 841px;
+  height: 416px;
+  z-index: 61;
+}
+.фон_ {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 150px;
+  top: 644px;
+  width: 1080px;
+  height: 1036px;
+  z-index: 60;
+}
+

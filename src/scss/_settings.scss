@@ -29,7 +29,6 @@ h1,h2,h3,h4 {
   //max-width: var(--content-width);
   //margin: 0 auto;
   min-width: 320px;
-  //min-height: 100%;
   font-size: 16px;
 }
 
@@ -45,18 +44,17 @@ a {
 }
 
 .site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  //overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .main {
-  flex: 1 0 auto;
+  flex-grow: 1;
 }
 
 .footer {
-  flex: 0 0 auto;
 }
 
 .section {

@@ -6,8 +6,9 @@
 
 // компоненты
 @import "./components/product";
+@import "./components/menu";
 
-// подключения компонентов страницы
+// подключения компонентов главной страницы
 @import "./components/header";
 @import "./components/hero";
 @import "./components/about_product";
@@ -18,6 +19,11 @@
 @import "./components/report";
 
 @import "./components/footer";
+
+// подключение стилей страницы контактов
+@import './components/contacts/contacts-main';
+@import "./components/contacts/contacts-hero";
+@import "./components/contacts/contacts-info";
 
 // тестовые стили, удалите их
 // .page__body {

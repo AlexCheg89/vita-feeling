@@ -1,0 +1,36 @@
+.contacts-hero {
+  height: 430px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  background-image: url(../img/contacts/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    max-width: 100%;
+    font-family: var(--font-family-main-title);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 58px;
+    margin-bottom: 35px;
+    line-height: 0.587;
+    text-transform: uppercase;
+
+  }
+
+  &__descr {
+    font-size: 47px;
+    line-height: 0.724;
+  }
+}
+
