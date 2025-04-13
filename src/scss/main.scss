@@ -25,6 +25,9 @@
 @import "./components/contacts/contacts-hero";
 @import "./components/contacts/contacts-info";
 
+// подключение стилей партнерской программы
+@import './components/partnjorskaya-programma/partner-hero';
+
 // тестовые стили, удалите их
 // .page__body {
 //   display: flex;
