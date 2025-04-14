@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" client="site" type="template" method="upgrade">
+<name>NewVitaFileeng2</name>
+<description/>
+<version>1.1.2</version>
+<creationDate>25.01.2025</creationDate>
+<author>AlexDevIt</author>
+<authorEmail>aleksejchegodaev@yandex.ru</authorEmail>
+<authorUrl>https://AlexDevIt.ru</authorUrl>
+<files>
+    <folder>css</folder>
+    <folder>fonts</folder>
+    <folder>html</folder>
+    <folder>images</folder>
+    <folder>language</folder>
+    <folder>library</folder>
+    <folder>js</folder>
+    <folder>404</folder>
+
+    <file>index.html</file>
+    <file>index.php</file>
+    <file>error.php</file>
+    <file>component.php</file>
+    <file>functions.php</file>
+    <file>script.js</file>
+    <file>templateDetails.xml</file>
+    <file>template_preview.png</file>
+    <file>template_thumbnail.png</file>
+</files>
+
+</extension>

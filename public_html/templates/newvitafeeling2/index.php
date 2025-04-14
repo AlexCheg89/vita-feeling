@@ -6,7 +6,7 @@ defined('_JEXEC') or die;
  * See readme.txt for more details on how to use the template.
  */
 
-//require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'functions.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'functions.php';
 
 // Create alias for $this object reference:
 $document = $this;
@@ -18,15 +18,15 @@ $app = JFactory::getApplication();
 
 
 
-//Artx::load("Artx_Page");
+Artx::load("Artx_Page");
 
 // Initialize $view:
-//$view = $this->artx = new ArtxPage($this);
+$view = $this->artx = new ArtxPage($this);
 
 // Decorate component with Artisteer style:
-//$view->componentWrapper();
+$view->componentWrapper();
 
-//JHtml::_('behavior.framework', true);
+JHtml::_('behavior.framework', true);
 ?>
 
 <!DOCTYPE html>
@@ -42,6 +42,7 @@ $app = JFactory::getApplication();
 
   <link rel="stylesheet" href="<?php echo $templateUrl; ?>/css/vendor.css">
   <link rel="stylesheet" href="<?php echo $templateUrl; ?>/css/main.css" media="all">
+
 </head>
 
 <body class="page__body">
@@ -53,13 +54,14 @@ $app = JFactory::getApplication();
       <span class="header__phone-text">8 (800) 950 23 23</span>
     </a>
     <a href="" class="header__contacts">Контакты</a>
-    <a href="#" class="header__logo">
-      <jdoc:include type="modules" name ="position-34"/>
+    <a href="/" class="header__logo">
+      <!-- <jdoc:include type="modules" name ="position-34"/> -->
+      <?php echo $view->position('position-34', 'art-nostyle'); ?>
     </a>
     <a href="" class="header__login">Вход / Регистрация</a>
     <a href="" class="header__catalog">
-      <img src="<?php echo $templateUrl; ?>/images/icons/icon-burger.png" alt="burger">
-      <span class="header__catalog-text">Каталог</span>
+      <!-- <jdoc:include type="modules" name ="position-1"/> -->
+
     </a>
     <div class="header__nav">
       <a href="" class="header__mark">Наша марка</a>
@@ -78,40 +80,9 @@ $app = JFactory::getApplication();
 
         </button>
       </form>
+
     </div>
-    <!-- <div class="header__top">
-      <div class="header__contacts">
-        <a class="header__phonelink" href="tel:+79266064028">+7 926 606 40 28</a>
-        <span>|</span>
-        <a class="header__contacts-btn"href="#">Контакты</a>
-      </div>
-      <div class="header__login">
-        <a href="">Вход / Регистрация</a>
-      </div>
-      <a href="#" class="header__logo">
-        <img class="header__logo-img" src="<?php echo $templateUrl; ?>/images/logo.png" alt="Лого">
-      </a>
-    </div>
-    <div class="header__bottom">
-      <nav class="nav header__nav">
-        <ul class="list-reset header__menu">
-          <li class="header__catalog"><a href="">Каталог</a></li>
-          <li class="header__mark"><a href="">Наша марка</a></li>
-          <li class="header__blog"><a href="">Блог</a></li>
-        </ul>
-      </nav>
-      <div class="header__shopbtn">
-        <a class="header__partner-prog" href="">Партнерская программа</a>
-        <span> | </span>
-        <a href="">
-          <img src="<?php echo $templateUrl; ?>/images/icons/icon-cart.png" alt="Cart">
-        </a>
-        <form class="header__search">
-          <input type="text" class="input" placeholder="Поиск">
-          <button type="submit"></button>
-        </form>
-      </div>
-    </div> -->
+
   </div>
 </header>
 
@@ -441,7 +412,9 @@ $app = JFactory::getApplication();
     </div>
   </div>
 </section>
-
+    <div class="container">
+    <?php echo $view->position('position-2', 'art-nostyle'); ?>
+    </div>
     </main>
     <footer class="footer">
   <div class="container footer__container">
