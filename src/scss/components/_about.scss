@@ -1,20 +1,36 @@
 .about {
+  position: relative;
+  overflow: hidden;
 
-  background: url('../img/about-bg.jpg') center / cover no-repeat;
 
-  @include tablet {
-    background-image: url('../img/about-bg2.jpg');
-    background-repeat: no-repeat;
-    // left: -960px;
-    // top: 0px;
-    // width: 1920px;
-    // height: 950px;
-    // z-index: 211;
+  &__bg-video {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -25px;
+
+    z-index: -1000;
+
   }
 
-  @include small-tablet {
-    background-position: center right;
-  }
+
+
+  //background: url('../img/about-bg.jpg') center / cover no-repeat;
+  //background: url('../img/1.webm') center / cover no-repeat;
+
+  // @include tablet {
+  //   background-image: url('../img/about-bg2.jpg');
+  //   background-repeat: no-repeat;
+  //   // left: -960px;
+  //   // top: 0px;
+  //   // width: 1920px;
+  //   // height: 950px;
+  //   // z-index: 211;
+  // }
+
+  // @include small-tablet {
+  //   background-position: center right;
+  // }
 
   &__title {
     margin-bottom: 30px;
