@@ -1,8 +1,45 @@
 .partner-hero {
-
+  position: relative;
   background-image: url('../img/partnjorskaya-programma/partner-hero-bg.png');
   background-size: cover;
-  background-repeat: no-repeat;
   border: 1px solid red;
+  width: 100%;
   height: 830px;
+  background-position: center;
+  overflow: hidden;
+
+  &__bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__container {
+    padding-top: 100px;
+    padding-bottom: 613px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-main-title);
+    z-index: 10;
+  }
+
+  &__title {
+    margin-bottom: 44px;
+    font-size: 58px;
+    font-weight: bold;
+    line-height: 0.587;
+    text-transform: uppercase;
+    color: rgb(61, 145, 160);
+  }
+
+  &__desc {
+    font-size: 30px;
+    font-style: italic;
+    line-height: 1;
+    color: rgb(71, 195, 98);
+  }
 }

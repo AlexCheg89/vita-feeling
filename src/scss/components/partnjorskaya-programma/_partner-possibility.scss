@@ -1,0 +1,34 @@
+.partner-possibility {
+  background-image: url('../img/partnjorskaya-programma/possibility_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    display: flex;
+    padding-top: 129px;
+    padding-bottom: 123px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__pre-title {
+    margin-bottom: 52px;
+    color:rgb(234, 191, 95);
+  }
+
+  &__title {
+    margin-bottom: 52px;
+    max-width: 724px;
+    font-family: var(--font-family-main-title);
+    font-size: 54px;
+    font-weight: bold;
+    line-height: 1.222;
+    text-align: center;
+    color: var(--light-color);
+  }
+
+  &__btn-block {
+    display: flex;
+    gap: 15px;
+  }
+}

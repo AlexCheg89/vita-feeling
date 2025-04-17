@@ -1,0 +1,22 @@
+.menu {
+  display: none;
+  height: 750px;
+  border: 1px solid red;
+
+  &__container {
+    height: 100%;
+    padding: 50px;
+    border: 1px solid green;
+  }
+
+  &__title {
+    font-family: var(--font-family-footitle);
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+}
+
+.multi-column {
+  column-count: 4;
+  column-gap: 20px;
+}

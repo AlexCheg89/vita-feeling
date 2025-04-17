@@ -1,12 +1,21 @@
 .partner-offer {
-
+  background-image: url('../img/partnjorskaya-programma/offer-bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
   &__container {
+    padding-top: 69px;
+    padding-bottom: 108px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  &__pre-title-text {
+    margin-bottom: 54px;
+  }
+
   &__title {
+    margin-bottom: 38px;
     font-family: var(--font-family-main-title);
     font-size: 48px;
     font-weight: bold;
@@ -16,10 +25,11 @@
   }
 
   &__desc {
-    max-width: 1035px;
+    margin-bottom: 57px;
+    max-width: 1032px;
     font-size: 24px;
     line-height: 1.5;
-    color: rgb(106, 106, 1);
+    color: rgb(106, 106, 109);
     text-align: center;
 
     .Сотрудничество_с_нашей_компанией_в_качестве_пар {
