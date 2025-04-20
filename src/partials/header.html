@@ -1,67 +1,67 @@
 <header class="header">
   <div class="container header__container">
-    <div>
-      <a class="header__phonelink" href="tel:+79266064028">+7 926 606 40 28</a>
-        <span>|</span>
-      <a class="header__contacts-btn"href="/contacts.html">Контакты</a>
-      <div>
-        <button class="btn-reset">Каталог продукции</button>
-        <a href="">Наша марка</a>
-        <a href="/blog.html">Блог</a>
-      </div>
+    <div class="header__left">
+        <div class="header__contacts">
+            <a class="header__phone" href="tel:88009502323">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="16px" height="16px">
+                <image  x="0px" y="0px" width="16px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfpBBQFFx4uI/38AAABf0lEQVQozz2QzYvMARyHn+f32yll87JsDpKiOMzYOdBKLnIYKQ5emiltwsGBUi67Tg7bpriI8hfYm3Yvsklepk1ms8vFFAcO1mXC2DXZMsP8vg6D8/Ppqc9jGXKsdhkCcISxaLsSd5nmmwSJ/Vx3igEAEyZjF3uY8bxPKQaSMO5lDjJBn5Ax7G1vUGeYl8ywG9LCNDl+x17eWQfW089arjDERQcdj0krHXIRZqzEIedYRZH3rONmdCyzQDWJJwHGL766EWI7EyxwPM45FBcYpWx5H1VzPOBMNAUgCr6gEps9ywFmE+a9hXznRw8D9ZiKky4yEJt4mxYy5mK/R+lSDUDAZ9T44CMWnU/z2OExJY7Z4LUEQJsWbT7bpZXmEVvMeoTTLPmKTEwo2XU5kDQPiF94GCVG3OIblthhjQoNP/EzzSOBRNN7buMUh4FLbGUNJyhGw0oPI0DCKNcwELKAhOZ/Qy9BPKfqBncCqjiWFv5e+zfyI/ejRp+D0fAqd/4AnouPxIn4XmsAAAAASUVORK5CYII=" />
+              </svg>
+              8 (800) 950 23 23</a>
+            <span class="header__divider-vertical"></span>
+            <a href="/contacts" class="header__contacts-link">Контакты</a>
+        </div>
+        <div class="header__divider-horizontal"></div>
+        <nav class="header__nav nav">
+          <div class="nav__item">
+            <a class="nav__link header__catalog" href="/catalog">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="27px" height="14px">
+                <path fill-rule="evenodd"  fill="rgb(249, 133, 0)"
+                d="M-0.000,13.695 L-0.000,11.739 L26.030,11.739 L26.030,13.695 L-0.000,13.695 ZM-0.000,5.870 L26.030,5.870 L26.030,7.826 L-0.000,7.826 L-0.000,5.870 ZM-0.000,0.001 L26.030,0.001 L26.030,1.957 L-0.000,1.957 L-0.000,0.001 Z"/>
+              </svg>
+              Каталог продукции
+            </a></div>
+          <div class="nav__item"><a class="nav__link" href="/brand">Наша марка</a></div>
+          <div class="nav__item"><a class="nav__link" href="/blog">Блог</a></div>
+        </nav>
     </div>
-    <a href="/index.html" class="header__logo">
-      <img class="header__logo-img" src="/img/logo.png" alt="Лого">
+    <a href="/" class="header__logo">
+        <img src="/img/logo.png" alt="Логотип">
     </a>
-    <div>
-      <div class="header__login">
-        <a href="">Вход / Регистрация</a>
+    <div class="header__right">
+      <div class="header__user">
+        <a class="header__user-link" href="">Вход /Регистрация</a>
       </div>
-      <div>
-        <a href="/partnjorskaya-programma.html">Партнёрская программа</a>
-        <a href="">
-          <img src="/img/icons/icon-cart.png" alt="Cart">
-        </a>
-        <form class="header__search">
-          <input type="text" class="input" placeholder="Поиск">
-          <button type="submit"></button>
-        </form>
+      <div class="header__divider-horizontal"></div>
+      <div class="header__right-bottom">
+        <a href="/partners">Партнёрская программа</a>
+        <span class="header__divider-vertical"></span>
+        <div class="header__actions">
+          <!-- <a href="/cart">Корзина (0)</a> -->
+           @include('cart.html')
+          <button class="header__search-btn">Поиск</button>
+        </div>
       </div>
     </div>
-
-    <!-- <div class="header__top">
-      <div class="header__contacts">
-        <a class="header__phonelink" href="tel:+79266064028">+7 926 606 40 28</a>
-        <span>|</span>
-        <a class="header__contacts-btn"href="#">Контакты</a>
-      </div>
-      <div class="header__login">
-        <a href="">Вход / Регистрация</a>
-      </div>
-      <a href="#" class="header__logo">
-        <img class="header__logo-img" src="/img/logo.png" alt="Лого">
-      </a>
-    </div>
-    <div class="header__bottom">
-      <nav class="nav header__nav">
-        <ul class="list-reset header__menu">
-          <li class="header__catalog"><a href="">Каталог</a></li>
-          <li class="header__mark"><a href="">Наша марка</a></li>
-          <li class="header__blog"><a href="">Блог</a></li>
-        </ul>
-      </nav>
-      <div class="header__shopbtn">
-        <a class="header__partner-prog" href="">Партнерская программа</a>
-        <span> | </span>
-        <a href="">
-          <img src="/img/icons/icon-cart.png" alt="Cart">
-        </a>
-        <form class="header__search">
-          <input type="text" class="input" placeholder="Поиск">
-          <button type="submit"></button>
-        </form>
-      </div>
-    </div> -->
   </div>
 </header>
-@include('menu.html')
+
+<!-- <div class="header__right">
+  <div class="header__user">
+    <a href="" class="">Тест</a>
+  </div>
+  <div class="header__divider-horizontal"></div>
+  <div class="header__right-bottom">
+    <a href="/partners">Партнёрская программа</a>
+    <span class="header__divider-vertical"></span>
+    <div class="header__actions">
+      <a href="/cart">Корзина (0)</a>
+      <button class="header__search-btn">Поиск</button>
+    </div>
+  </div>
+</div> -->
