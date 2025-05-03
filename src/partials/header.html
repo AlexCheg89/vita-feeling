@@ -11,23 +11,36 @@
               </svg>
               8 (800) 950 23 23</a>
             <span class="header__divider-vertical"></span>
-            <a href="/contacts" class="header__contacts-link">Контакты</a>
+            <a href="/contacts.html" class="header__contacts-link">Контакты</a>
         </div>
         <div class="header__divider-horizontal"></div>
         <nav class="header__nav nav">
-          <div class="nav__item">
-            <a class="nav__link header__catalog" href="/catalog">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="27px" height="14px">
-                <path fill-rule="evenodd"  fill="rgb(249, 133, 0)"
-                d="M-0.000,13.695 L-0.000,11.739 L26.030,11.739 L26.030,13.695 L-0.000,13.695 ZM-0.000,5.870 L26.030,5.870 L26.030,7.826 L-0.000,7.826 L-0.000,5.870 ZM-0.000,0.001 L26.030,0.001 L26.030,1.957 L-0.000,1.957 L-0.000,0.001 Z"/>
-              </svg>
-              Каталог продукции
-            </a></div>
-          <div class="nav__item"><a class="nav__link" href="/brand">Наша марка</a></div>
-          <div class="nav__item"><a class="nav__link" href="/blog">Блог</a></div>
+          <div class="nav__list">
+            <div class="nav__item">
+              <a class="nav__link header__catalog" href="/catalog">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="27px" height="14px">
+                  <path fill-rule="evenodd"  fill="rgb(249, 133, 0)"
+                  d="M-0.000,13.695 L-0.000,11.739 L26.030,11.739 L26.030,13.695 L-0.000,13.695 ZM-0.000,5.870 L26.030,5.870 L26.030,7.826 L-0.000,7.826 L-0.000,5.870 ZM-0.000,0.001 L26.030,0.001 L26.030,1.957 L-0.000,1.957 L-0.000,0.001 Z"/>
+                </svg>
+                Каталог
+              </a></div>
+            <div class="nav__item nav__dropdown">
+              <a class="nav__link nav__link--drop" href="/brand">Наша марка</a>
+              <div class="nav__list nav__list--dropdown dropdown-list">
+                <a class="dropdown-list__link" href="">Наша миссия</a>
+                <a class="dropdown-list__link" href="">Исследовательская лаборатория</a>
+                <a class="dropdown-list__link" href="">Работа производства</a>
+                <a class="dropdown-list__link" href="">Сертификаты соответствия</a>
+                <a class="dropdown-list__link" href="">Контрактные заказы и бренды</a>
+                <a class="dropdown-list__link" href="">Партнёрская программа</a>
+                <a class="dropdown-list__link" href="">Словарь терминов</a>
+              </div>
+            </div>
+            <div class="nav__item"><a class="nav__link" href="/blog">Блог</a></div>
+          </div>
         </nav>
     </div>
     <a href="/" class="header__logo">
@@ -39,12 +52,22 @@
       </div>
       <div class="header__divider-horizontal"></div>
       <div class="header__right-bottom">
-        <a href="/partners">Партнёрская программа</a>
+        <a href="/partnjorskaya-programma.html">Партнёрская программа</a>
         <span class="header__divider-vertical"></span>
         <div class="header__actions">
           <!-- <a href="/cart">Корзина (0)</a> -->
            @include('cart.html')
-          <button class="header__search-btn">Поиск</button>
+           <form class="header__search">
+            <label for="" class="search"><input type="text" class="search__input" placeholder="Поиск"></label>
+            <button class="btn-reset" type="submit">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="19px" height="18px">
+                <image  x="0px" y="0px" width="19px" height="18px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAASCAQAAAATBS3iAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfpBBQJLBWMWTIoAAABmklEQVQoz1WRMWuUQRiEn9mNpjBJc1qcCvbmOywURO5sgmgj4QjogRCCoKgYLWwsxCKFvRD8CYKXKtopEhDESgWRxEQNmoMYEhQSAqLi3Vh8t9+ZbXYXhpnnnVcNwIHDjGuUA7bm/ZBZrdI9BkQchj5dpckxrfg9qyppQnWWWAYjQEBQ0BWmtcA4VY1xlhq3GPAjRpLIgBqZX2nR51hRL+SMm5pn1D9yLwiekHw7ichDnuo+x6kLAcYEjfmdXuwQYfyYtk8aY4QILmsNuxvoFLvlDQ0qJrbAb3YlgnQLovroJJEJfOYQ/f+3BMBB9vGNdt6aCGpS8WXkggsY5JLXaPb8AzNu6Y5PERMuQ1zzBf2l38WkcXhLH1zXRaRt9mgvFd3jpv64xBF99Nc8VA2MTnPXRyV/V3RJm37Cum4wxCLXmQMTMwTLzLKkn2zQ0pyneKCX/KLKfqos+IvQ+QJdEDGd/O3dTGqKAT55Us9iVqw39ZsvXG299jY1lTmhVsx21CqUewHq6I02XVPZla4bhaD3Azq81TqZnv8DD3+iC9T4T78AAAAASUVORK5CYII=" />
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </div>

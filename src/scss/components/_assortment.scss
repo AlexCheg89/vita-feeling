@@ -1,9 +1,8 @@
 .assortment {
-
   &__title {
     text-align: center;
     margin-bottom: 30px;
-    @include adaptive-value('font-size', 44, 42, 3);
+    @include adaptive-value('font-size', 44, 38, 3);
   }
 
   &__subtitle {

@@ -60,9 +60,9 @@
     margin-bottom: 30px;
     font-family: var(--font-family-main-title);
     //font-size: 58px;
-    @include adaptive-value("font-size", 58, 48, 3);
+    @include adaptive-value("font-size", 58, 44, 3);
     font-weight: bold;
-    color: #42b224;
+    color: #40a60b;
     //line-height: 50px;
 
   }
@@ -72,13 +72,13 @@
     //font-size: 47px;
     @include adaptive-value("font-size", 47, 37, 3);
     //line-height: 44px;
-    color: #3a3a3a;
+    color: #2c2c2c;
   }
 
   &__descr {
     margin-bottom: 50px;
     font-style: italic;
-    color: #595959;
+    color: #636363;
     @include tablet {
       margin-bottom: 25px;
     }
@@ -120,19 +120,19 @@
   }
 
   &__list-item:nth-child(1) {
-    background-color: #fcb44d;
+    background-color: #f7a436;
   }
 
   &__list-item:nth-child(2) {
-    background-color: #78d460;
+    background-color: #6fce47;
   }
 
   &__list-item:nth-child(3) {
-    background-color: #a6cd42;
+    background-color: #9ac428;
   }
 
   &__list-item:nth-child(4) {
-    background-color: #f7875b;
+    background-color: #ee7047;
   }
 
   &__list-link {

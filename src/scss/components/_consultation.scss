@@ -1,16 +1,34 @@
 .consultation {
-  background-color: #f89553;
-  padding: 50px 0;
+  border:1px solid red;
+
 
   &__container {
+    position: relative;
+    border: 1px solid green;
     display: flex;
-    justify-content: flex-end;
-    background: url('../img/logo-big.png') left / contain no-repeat;
+    //justify-content: flex-end;
+    //background: url('../img/logo-big.png') left / contain no-repeat;
+    background-color: #f89553;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include small-mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__doc-img {
+    position: absolute;
+    top: -100px;
   }
 
   &__content {
     padding: 10px 0px 0px 100px;
     width: 50%;
+
+    @include small-mobile {
+      padding: 0;
+    }
   }
 
   &__container img {
