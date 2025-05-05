@@ -1,12 +1,10 @@
 .consultation {
-  border:1px solid red;
-
 
   &__container {
     position: relative;
     border: 1px solid green;
     display: flex;
-    //justify-content: flex-end;
+    justify-content: flex-end;
     //background: url('../img/logo-big.png') left / contain no-repeat;
     background-color: #f89553;
     padding-top: 50px;
@@ -18,13 +16,15 @@
   }
 
   &__doc-img {
-    position: absolute;
-    top: -100px;
+    line-height: 0;
+    font-size: 0;
   }
 
   &__content {
+    padding-top: 10px;
+    padding-left: 65px;
     padding: 10px 0px 0px 100px;
-    width: 50%;
+    width: 60%;
 
     @include small-mobile {
       padding: 0;
@@ -55,11 +55,11 @@
 
   &__form {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    width: 100%;
   }
 
   &__phone-input {
+    flex: 1 0 0;
     padding: 15px;
     font-size: 16px;
     color: rgb(149, 149, 149);
@@ -67,7 +67,7 @@
     line-height: 1.879;
   }
 
-  &__btn{
+  &__btn {
     background-color: rgb(120, 212, 96);
 
     &:hover {
