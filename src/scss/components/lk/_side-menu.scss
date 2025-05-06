@@ -1,0 +1,16 @@
+.side-menu {
+  background-color: #3a3a3a;
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+  &__user-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    color: #898989;
+  }
+}
