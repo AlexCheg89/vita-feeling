@@ -1,11 +1,11 @@
 .consultation {
+
   position: relative;
   border: 1px solid red;
 
   @include small-mobile {
     padding-top: 310px;
   }
-
 
   &__container {
     position: relative;
@@ -45,6 +45,12 @@
   }
 
   &__doc-img {
+    line-height: 0;
+    font-size: 0;
+  }
+
+  &__content {
+
     position: relative;
     line-height: 0;
     font-size: 0;
@@ -122,6 +128,5 @@
       background-color: rgb(247, 135, 91);
     }
   }
-
 
 }
