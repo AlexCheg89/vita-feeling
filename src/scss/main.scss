@@ -31,6 +31,10 @@
 @import './components/partnjorskaya-programma/partner-offer';
 @import './components//partnjorskaya-programma/partner-possibility';
 
+// подключение стилей личного кабинета
+@import './components/lk/user-cabinet';
+@import './components/lk/side-menu';
+
 // тестовые стили, удалите их
 // .page__body {
 //   display: flex;
