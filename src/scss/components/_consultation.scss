@@ -1,19 +1,25 @@
 .consultation {
-  position: relative;
-  border: 1px solid red;
-
+  //position: relative;
+  background-color: #f89553;
   @include small-mobile {
+    position: relative;
     padding-top: 310px;
+    background-color: transparent;
   }
 
   &__container {
     position: relative;
-    border: 1px solid green;
     display: flex;
     justify-content: flex-end;
     background-color: #f89553;
     padding-top: 50px;
     padding-bottom: 50px;
+    border: 1px solid red;
+
+    @include small-tablet {
+      padding-bottom: 0;
+      justify-content: start;
+    }
 
     @include small-mobile {
       position: static;
@@ -31,11 +37,20 @@
     z-index: 1;
     line-height: 0;
     overflow: hidden;
-    border: 1px solid yellow;
 
-    @include small-mobile {
+    @include small-tablet {
+      display: block;
       position: static;
       transform: translateY(0);
+      margin-left: -20px;
+      margin-bottom: 30px;
+    }
+
+    @include small-mobile {
+      display: block;
+      position: static;
+      transform: translateY(0);
+      margin-left: -20px;
       margin-bottom: 30px;
     }
   }
@@ -47,12 +62,29 @@
     margin-bottom: -50px;
     z-index: 2;
 
+    border: 1px solid yellow;
+
+    @include small-tablet {
+      display: inline-flex;
+      align-items: end;
+      margin-bottom: 0;
+    }
+
     @include small-mobile {
       position: absolute;
       top: 0;
       width: 50%;
       left: 50%;
       transform: translateX(-50%);
+      z-index: -1;
+    }
+  }
+
+  &__doc-img img {
+    border: 1px solid black;
+
+    @include small-tablet {
+
     }
   }
 
@@ -61,12 +93,22 @@
     padding-left: 65px;
     width: 55%;
 
+    @include small-tablet {
+      padding-bottom: 50px;
+    }
+
     @include small-mobile {
       display: flex;
       flex-direction: column;
       padding: 0;
       align-items: center;
       width: 100%;
+    }
+  }
+
+  &__tittle-block {
+    @include small-tablet {
+      display: flex;
     }
   }
 
@@ -96,7 +138,7 @@
     display: flex;
     width: 100%;
 
-    @include small-mobile {
+    @include tablet {
       flex-direction: column;
       gap: 15px;
     }

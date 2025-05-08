@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    height: 90px;
+    max-height: 90px;
   }
 
   &__left {
@@ -19,6 +19,13 @@
     justify-content: space-between;
     padding: 15px 20px 15px 0;
     flex: 1;
+
+    @include tablet_908 {
+      flex-direction: row-reverse;
+      justify-content: start;
+      gap: 20px;
+      align-items: center;
+    }
   }
 
   &__contacts {
@@ -34,8 +41,25 @@
     gap: 16px;
   }
 
+  &__phone span {
+    @include small-tablet {
+      display: none;
+    }
+  }
+
   &__phone svg {
     color: currentColor;
+  }
+
+  &__contacts-link {
+    @include tablet_908 {
+      display: flex;
+      align-items: center;
+    }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__catalog {
@@ -45,11 +69,32 @@
     gap: 20px;
   }
 
+  &__catalog span {
+    @include tablet_908 {
+      display: none;
+    }
+  }
+
+  &__brand {
+    @include tablet_908 {
+      display: none;
+    }
+  }
+
+  &__blog {
+    display: none;
+  }
+
   &__logo {
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 5px 20px;
     flex-shrink: 0;
+    max-width: 260px;
+
+    @include mobile {
+      width: 50%;
+    }
   }
 
   &__right {
@@ -59,6 +104,12 @@
     justify-content: space-between;
     padding: 15px 0 15px 20px;
     flex: 1;
+
+    @include tablet_908 {
+      flex-direction: row;
+      justify-content: end;
+      align-items: center;
+    }
   }
 
   &__right-bottom {
@@ -66,6 +117,18 @@
     justify-content: flex-end;
     align-items: center;
     gap: 8px;
+  }
+
+  &__user {
+    @include tablet_908 {
+      display: none;
+    }
+  }
+
+  &__link-pp {
+    @include tablet_908 {
+      display: none;
+    }
   }
 
   &__actions {
@@ -81,6 +144,10 @@
     background: #ddd;
     margin: 0 10px;
     vertical-align: middle;
+
+    @include tablet_908 {
+      display: none;
+    }
   }
 
   &__divider-horizontal {
@@ -88,6 +155,10 @@
     background: #eee;
     margin: 8px 0;
     width: 100%;
+
+    @include tablet_908 {
+      display: none;
+    }
   }
 }
 
