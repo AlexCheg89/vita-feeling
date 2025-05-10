@@ -1,44 +1,43 @@
 .partner-hero {
   position: relative;
-  background-image: url('../img/partnjorskaya-programma/partner-hero-bg.png');
-  background-size: cover;
-  border: 1px solid red;
+  overflow: hidden;
   width: 100%;
   height: 830px;
+  background-image: url('../img/partnjorskaya-programma/partner-hero-bg.png');
   background-position: center;
-  overflow: hidden;
+  background-size: cover;
 
   &__bg {
-    display: none;
     position: absolute;
     top: 0;
-    width: 100%;
     z-index: -1;
+    display: none;
+    width: 100%;
   }
 
   &__container {
-    padding-top: 100px;
-    padding-bottom: 613px;
+    z-index: 10;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 613px;
     font-family: var(--font-family-main-title);
-    z-index: 10;
   }
 
   &__title {
     margin-bottom: 44px;
+    font-weight: 700;
     font-size: 58px;
-    font-weight: bold;
     line-height: 0.587;
     text-transform: uppercase;
     color: rgb(61, 145, 160);
   }
 
   &__desc {
-    font-size: 30px;
     font-style: italic;
+    font-size: 30px;
     line-height: 1;
     color: rgb(71, 195, 98);
   }

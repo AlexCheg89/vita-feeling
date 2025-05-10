@@ -18,14 +18,15 @@
   }
 }
 
-@mixin tablet_908 {
-  @media (max-width: (908px)) {
+
+@mixin tablet_956 {
+  @media (max-width: (956px)) {
     @content;
   }
 }
 
-@mixin tablet_956 {
-  @media (max-width: (956px)) {
+@mixin tablet_908 {
+  @media (max-width: (908px)) {
     @content;
   }
 }

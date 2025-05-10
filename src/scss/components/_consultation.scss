@@ -30,7 +30,7 @@
 
   &__logo {
     position: absolute;
-    left: 0;
+    left: -50px;
     top: 50%;
     transform: translateY(-50%);
     width: 33%;
@@ -82,10 +82,6 @@
 
   &__doc-img img {
     border: 1px solid black;
-
-    @include small-tablet {
-
-    }
   }
 
   &__content {

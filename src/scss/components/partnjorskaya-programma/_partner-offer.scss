@@ -1,13 +1,14 @@
 .partner-offer {
   background-image: url('../img/partnjorskaya-programma/offer-bg.png');
-  background-repeat: no-repeat;
   background-size: contain;
+  background-repeat: no-repeat;
+
   &__container {
-    padding-top: 69px;
-    padding-bottom: 108px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 69px;
+    padding-bottom: 108px;
   }
 
   &__pre-title-text {
@@ -17,11 +18,11 @@
   &__title {
     margin-bottom: 38px;
     font-family: var(--font-family-main-title);
+    font-weight: 700;
     font-size: 48px;
-    font-weight: bold;
     line-height: 0.709;
-    color: rgb(61, 145, 160);
     text-align: center;
+    color: rgb(61, 145, 160);
   }
 
   &__desc {
@@ -29,25 +30,7 @@
     max-width: 1032px;
     font-size: 24px;
     line-height: 1.5;
-    color: rgb(106, 106, 109);
     text-align: center;
-
-    .Сотрудничество_с_нашей_компанией_в_качестве_пар {
-      font-size: 20px;
-      font-family: "Roboto";
-      color: rgb(106, 106, 109);
-      line-height: 1.5;
-      text-align: center;
-      -moz-transform: matrix( 1.00000106148211,0,0,1.00012338938409,0,0);
-      -webkit-transform: matrix( 1.00000106148211,0,0,1.00012338938409,0,0);
-      -ms-transform: matrix( 1.00000106148211,0,0,1.00012338938409,0,0);
-      position: absolute;
-      left: 443.18px;
-      top: 1204.391px;
-      width: 1021.006px;
-      height: 79px;
-      z-index: 166;
-    }
-
+    color: rgb(106, 106, 109);
   }
 }

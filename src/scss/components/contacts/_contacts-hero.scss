@@ -6,23 +6,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
-  background-image: url(../img/contacts/contacts-bg.png);
-  background-repeat: no-repeat;
+  background-image: url('../img/contacts/contacts-bg.png');
   background-size: cover;
+  background-repeat: no-repeat;
 
   &__container {
     max-width: 100%;
     font-family: var(--font-family-main-title);
+    font-weight: 700;
     color: rgb(255, 255, 255);
-    font-weight: bold;
     text-align: center;
   }
 
   &__title {
-    font-size: 58px;
     margin-bottom: 35px;
+    font-size: 58px;
     line-height: 0.587;
     text-transform: uppercase;
 
